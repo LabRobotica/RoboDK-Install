@@ -22,18 +22,14 @@ sudo ./Install-RoboDK
 echo ""
 echo "---> Criando atalho no menu do sistema <---"
 echo ""
-ROBODK_ROOT=/usr/local/RoboDK
-FILE=/usr/share/applications/RoboDK.desktop
-echo "[Desktop Entry]" > $FILE
-echo "Version=3.4.0" >> $FILE
-echo "Type=Application" >> $FILE
-echo "Terminal=false" >> $FILE
-echo "Name=RoboDK" >> $FILE
-echo "Path=${ROBODK_ROOT}" >> $FILE
-echo "Exec=sh -c ./RoboDK-Start.sh" >> $FILE
-echo "Icon=${ROBODK_ROOT}/logo-robodk.png" >> $FILE
-chmod +x $FILE
-
+sudo sh -e 'echo "[Desktop Entry]" > /usr/share/applications/RoboDK.desktop'
+sudo sh -e 'echo "Version=3.4.0" >> /usr/share/applications/RoboDK.desktop'
+sudo sh -e 'echo "Type=Application" >> /usr/share/applications/RoboDK.desktop'
+sudo sh -e 'echo "Terminal=false" >> /usr/share/applications/RoboDK.desktop'
+sudo sh -e 'echo "Name=RoboDK" >> /usr/share/applications/RoboDK.desktop'
+sudo sh -e 'echo "Path=/usr/local/RoboDK" >> /usr/share/applications/RoboDK.desktop'
+sudo sh -e 'echo "Exec=sh -c ./RoboDK-Start.sh" >> /usr/share/applications/RoboDK.desktop'
+sudo sh -e 'echo "Icon=/usr/local/RoboDK/logo-robodk.png" >> /usr/share/applications/RoboDK.desktop'
 
 clear
 echo "################################################################################"
