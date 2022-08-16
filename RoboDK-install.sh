@@ -16,14 +16,23 @@ tar -xvf Install-RoboDK.tar.gz
 echo ""
 echo "---> Executando instalador <---"
 echo ""
+echo "Instale em /usr/local/RoboDK"
+echo ""
 sudo ./Install-RoboDK
-echo ""
-echo "---> Criando Link simbólico para RoboDK em /usr/bin <---"
-echo ""
-sudo ln -sf 
 echo ""
 echo "---> Criando atalho no menu do sistema <---"
 echo ""
+ROBODK_ROOT=/usr/local/RoboDK
+FILE=/usr/share/applications/RoboDK.desktop
+echo "[Desktop Entry]" > $FILE
+echo "Version=3.4.0" >> $FILE
+echo "Type=Application" >> $FILE
+echo "Terminal=false" >> $FILE
+echo "Name=RoboDK" >> $FILE
+echo "Path=${ROBODK_ROOT}" >> $FILE
+echo "Exec=sh -c ./RoboDK-Start.sh" >> $FILE
+echo "Icon=${ROBODK_ROOT}/logo-robodk.png" >> $FILE
+chmod +x $FILE
 
 
 clear
