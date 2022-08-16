@@ -30,6 +30,7 @@ sudo sh -c "echo 'Name=RoboDK' >> /usr/share/applications/RoboDK.desktop"
 sudo sh -c "echo 'Path=/usr/local/RoboDK' >> /usr/share/applications/RoboDK.desktop"
 sudo sh -c "echo 'Exec=sh -c /usr/local/RoboDK/RoboDK-Start.sh' >> /usr/share/applications/RoboDK.desktop"
 sudo sh -c "echo 'Icon=/usr/local/RoboDK/logo-robodk.png' >> /usr/share/applications/RoboDK.desktop"
+sudo sh -c "echo 'Categories=Development;' >> /usr/share/applications/RoboDK.desktop"
 
 clear
 echo "################################################################################"
