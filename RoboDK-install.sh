@@ -28,7 +28,7 @@ sudo sh -c "echo 'Type=Application' >> /usr/share/applications/RoboDK.desktop"
 sudo sh -c "echo 'Terminal=false' >> /usr/share/applications/RoboDK.desktop"
 sudo sh -c "echo 'Name=RoboDK' >> /usr/share/applications/RoboDK.desktop"
 sudo sh -c "echo 'Path=/usr/local/RoboDK' >> /usr/share/applications/RoboDK.desktop"
-sudo sh -c "echo 'Exec=sh -c ./RoboDK-Start.sh' >> /usr/share/applications/RoboDK.desktop"
+sudo sh -c "echo 'Exec=sh -c /usr/local/RoboDK/RoboDK-Start.sh' >> /usr/share/applications/RoboDK.desktop"
 sudo sh -c "echo 'Icon=/usr/local/RoboDK/logo-robodk.png' >> /usr/share/applications/RoboDK.desktop"
 
 clear
